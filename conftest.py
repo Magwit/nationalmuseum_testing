@@ -10,12 +10,13 @@ import selenium.webdriver
 
 
 @pytest.fixture
-def browser(scope="session"):  # session -> only one time before the test suite
+def browser(scope="session"):  # session -> once before the test suite.
 
     # Initialize webdriver instance
     browser = selenium.webdriver.Chrome()
 
     # optional implicit wait
+    browser.implicitly_wait(10)
 
     yield browser
 

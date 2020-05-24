@@ -4,6 +4,10 @@ class FreeImages:
 
     # action methods
 
+    def load(self):
+        # TODO load is needed for the last test case
+        pass
+
     def scroll_to_wikimedia_tile(self):
         # TODO
         pass
@@ -13,6 +17,6 @@ class FreeImages:
         pass
 
     # return methods
-    def title():
+    def title(self):
         # TODO
-        pass
+        return ""
