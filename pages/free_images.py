@@ -18,8 +18,7 @@ class FreeImages:
         self.browser = browser
 
     def load(self):
-        # TODO load is needed for the last test case
-        pass
+        self.browser.get(self.URL)
 
     # Interaction methods
 
@@ -33,9 +32,10 @@ class FreeImages:
     def click_wikimedia_tile(self):
         self.browser.implicitly_wait(10)
         self.browser.execute_script("arguments[0].click()", self.wikimedia_tile)
-        time.sleep(8)
 
     # return methods
+
+    # NOTE carefulu not to call title method after clickin on wikimedia link
     def title(self):
-        # TODO
-        return ""
+        time.sleep(5)
+        return self.browser.title

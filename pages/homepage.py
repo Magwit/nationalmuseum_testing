@@ -30,8 +30,12 @@ class HomePage:
             "arguments[0].scrollIntoView({block: 'center'})", self.free_images_tile
         )
 
-    def click_on_free_images_tile(self):
+    def click_free_images_tile(self):
         self.browser.implicitly_wait(10)
         # free_images_tile = self.browser.find_element(*self.FREE_IMAGES_TILE)
         self.browser.execute_script("arguments[0].click()", self.free_images_tile)
-        time.sleep(8)
+
+    # Return methods
+    def title(self):
+        time.sleep(5)
+        return self.browser.title

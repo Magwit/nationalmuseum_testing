@@ -1,5 +1,5 @@
 """
-This test covers starting at the homepage
+This test covers starting at the Nationalmuseum homepage
 scrolling down and clicking in the Free Images tile
 """
 
@@ -20,13 +20,11 @@ def test_homepage_to_free_images(browser):
 
     # AND clicks on the Freeimages tile
 
-    homepage.click_on_free_images_tile()
+    homepage.click_free_images_tile()
 
     # THEN the user is at Nattionalmuseum Free Images page
 
-    assert "" in free_images.title()
-
-    # ADDITIONALY cookies are deleted
-
-    # TODO remove this exception once the test is completed
-    raise Exception("Incomplete test")
+    assert free_images.title() == "Fria bilder | Nationalmuseum"
+    # NOTE I am not really testing a propery of the Free images page itself
+    # assert homepage.title() == "Fria bilder | Nationalmuseum" also passes
+    # The test asserts what the browser is doing at the moment.
