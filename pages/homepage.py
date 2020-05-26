@@ -1,8 +1,10 @@
 from selenium.webdriver.common.by import By
 import time  # TODO remove sleep in final version
 
+from pages.basepage import BasePage
 
-class HomePage:
+
+class HomePage(BasePage):
 
     # URL
     URL = "https://www.nationalmuseum.se/"
@@ -14,8 +16,9 @@ class HomePage:
     )
 
     # Initializer and setting state
-    def __init__(self, browser):
-        self.browser = browser
+    # TODO No init if I iherit!
+    # def __init__(self, browser):
+    #     self.browser = browser
 
     def load(self):
         self.browser.get(self.URL)

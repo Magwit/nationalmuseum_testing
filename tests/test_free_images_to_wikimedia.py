@@ -3,6 +3,7 @@ This test covers starting at Nationalmuseum free images page
 scrolling down and clicking on the Wikimedia link 
 """
 
+
 from pages.free_images import FreeImages
 
 

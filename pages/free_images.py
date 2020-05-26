@@ -1,8 +1,10 @@
 from selenium.webdriver.common.by import By
 import time  # TODO remove sleep in final version
 
+from pages.basepage import BasePage
 
-class FreeImages:
+
+class FreeImages(BasePage):
 
     # URL
     URL = "https://www.nationalmuseum.se/samlingarna/fria-bilder"
@@ -14,9 +16,10 @@ class FreeImages:
     )
 
     # Initializer and setting state
-    def __init__(self, browser):
-        self.browser = browser
+    # def __init__(self, browser):
+    #     self.browser = browser
 
+    # TODO load is a candidate for refactoring
     def load(self):
         self.browser.get(self.URL)
 
