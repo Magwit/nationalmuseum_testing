@@ -15,26 +15,20 @@ class FreeImages(BasePage):
         "//a[@href='https://commons.wikimedia.org/wiki/Category:Media_contributed_by_Nationalmuseum_Stockholm:_2016-10' and @class='link-container']",
     )
 
-    # Initializer and setting state
-    # def __init__(self, browser):
-    #     self.browser = browser
-
-    # TODO load is a candidate for refactoring
-    def load(self):
-        self.browser.get(self.URL)
+    # def load(self):
+    #     self.browser.get(self.URL)
 
     # Interaction methods
 
-    def scroll_to_wikimedia_tile(self):
-        # Declaring an instance variable which will be re used in the click function
-        self.wikimedia_tile = self.browser.find_element(*self.WIKIMEDIA_TILE)
-        self.browser.execute_script(
-            "arguments[0].scrollIntoView({block: 'center'})", self.wikimedia_tile
-        )
+    # def scroll_to_wikimedia_tile(self):
+    #     self.wikimedia_tile = self.browser.find_element(*self.WIKIMEDIA_TILE)
+    #     self.browser.execute_script(
+    #         "arguments[0].scrollIntoView({block: 'center'})", self.wikimedia_tile
+    #     )
 
-    def click_wikimedia_tile(self):
-        self.browser.implicitly_wait(10)
-        self.browser.execute_script("arguments[0].click()", self.wikimedia_tile)
+    # def click_wikimedia_tile(self):
+    #     self.browser.implicitly_wait(10)
+    #     self.browser.execute_script("arguments[0].click()", self.wikimedia_tile)
 
     # return methods
 

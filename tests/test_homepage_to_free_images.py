@@ -13,14 +13,14 @@ def test_homepage_to_free_images(browser):
     free_images = FreeImages(browser)
 
     # GIVEN Nationalmuseum homepage is displayed
-    homepage.load()
+    homepage.load(HomePage.URL)
 
     # WHEN whe user scrolls down to the Free Images tile
-    homepage.scroll_to_free_images_tile()
+    homepage.scroll_to(HomePage.FREE_IMAGES_TILE)
 
     # AND clicks on the Freeimages tile
 
-    homepage.click_free_images_tile()
+    homepage.click_tile()
 
     # THEN the user is at Nattionalmuseum Free Images page
 
