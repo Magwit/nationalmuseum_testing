@@ -24,7 +24,6 @@ def test_homepage_to_free_images(browser):
 
     # THEN the user is at Nattionalmuseum Free Images page
 
-    assert free_images.title() == "Fria bilder | Nationalmuseum"
-    # NOTE I am not really testing a propery of the Free images page itself
-    # assert homepage.title() == "Fria bilder | Nationalmuseum" also passes
-    # The test asserts what the browser is doing at the moment.
+    assert free_images.get_title() == "Fria bilder | Nationalmuseum"
+    # NOTE # The test asserts only what the browser is doing at the moment,
+    # and does not actually test a propery of the Free images page itself.

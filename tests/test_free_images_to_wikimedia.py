@@ -7,8 +7,6 @@ scrolling down and clicking on the Wikimedia link
 from pages.free_images import FreeImages
 
 
-# TODO create a separate Wikimedia page object
-# or test everything on here?
 def test_free_images_to_wikimedia(browser):
     free_images = FreeImages(browser)
 
@@ -24,7 +22,6 @@ def test_free_images_to_wikimedia(browser):
     # THEN the user is at Wikimedia commons
 
     assert (
-        free_images.title()
+        free_images.get_title()
         == "Category:Media contributed by Nationalmuseum Stockholm: 2016-10 - Wikimedia Commons"
     )
-    # And images from Nationalmuseum are displayed

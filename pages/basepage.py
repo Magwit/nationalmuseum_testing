@@ -1,4 +1,3 @@
-# from selenium.webdriver.common.by import By
 
 
 class BasePage:
@@ -18,3 +17,6 @@ class BasePage:
         # locator = self.browser.find_element(*locator)
         self.browser.implicitly_wait(10)
         return self.browser.execute_script("arguments[0].click()", self.locator)
+
+    def get_title(self):
+        return self.browser.title
