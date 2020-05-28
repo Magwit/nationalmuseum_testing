@@ -6,8 +6,6 @@ scrolling down and clicking in the Free Images tile
 
 from pages.homepage import HomePage
 
-# from pages.free_images import FreeImages
-
 
 def test_homepage_to_free_images(browser):
     homepage = HomePage(browser)

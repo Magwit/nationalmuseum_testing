@@ -13,8 +13,3 @@ class HomePage(BasePage):
         By.XPATH,
         "//div[@class='blurb-link']/a[@href='https://www.nationalmuseum.se/samlingarna/fria-bilder' and @tabindex='0']",
     )
-
-    # Return methods
-    # def title(self):
-    #     time.sleep(5)
-    #     return self.browser.title

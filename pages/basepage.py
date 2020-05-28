@@ -1,4 +1,3 @@
-import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -12,7 +11,6 @@ class BasePage:
         return self.browser.get(url)
 
     def scroll_to(self, locator):
-        # time.sleep(4)
         try:
             self.wait.until(
                 EC.presence_of_element_located(self.browser.find_element(*locator))
@@ -27,14 +25,9 @@ class BasePage:
         )
 
     def click_tile(self):
-        # locator = self.browser.find_element(*locator)
-        # self.browser.implicitly_wait(10)
-        # time.sleep(3)
         return self.browser.execute_script("arguments[0].click()", self.locator)
 
     def get_title(self, title):
-        # self.browser.implicitly_wait(10)
-        # time.sleep(3)
         try:
             self.wait.until(EC.title_is(title))
         except Exception as e:

@@ -1,6 +1,6 @@
 """
 This test covers starting at Nationalmuseum free images page
-scrolling down and clicking on the Wikimedia link 
+scrolling down and clicking on the Wikimedia link
 """
 
 
@@ -22,3 +22,5 @@ def test_free_images_to_wikimedia(browser):
     # THEN the user is at Wikimedia commons
     title = "Category:Media contributed by Nationalmuseum Stockholm: 2016-10 - Wikimedia Commons"
     assert free_images.get_title(title) == title
+    # NOTE # The test asserts only what the browser is doing at the moment,
+    # and does not actually test a propery of the Free images page itself.
