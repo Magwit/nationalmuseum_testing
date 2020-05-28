@@ -9,6 +9,7 @@ class BasePage:
         return self.browser.get(url)
 
     def scroll_to(self, locator):
+        time.sleep(4)
         self.locator = self.browser.find_element(*locator)
         return self.browser.execute_script(
             "arguments[0].scrollIntoView({block: 'center'})", self.locator
