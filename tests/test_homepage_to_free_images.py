@@ -14,7 +14,7 @@ def test_homepage_to_free_images(browser):
     # GIVEN Nationalmuseum homepage is displayed
     homepage.load(HomePage.URL)
 
-    # WHEN whe user scrolls down to the Free Images tile
+    # WHEN the user scrolls down to the Free Images tile
     homepage.scroll_to(HomePage.FREE_IMAGES_TILE)
 
     # AND clicks on the Freeimages tile
@@ -25,4 +25,4 @@ def test_homepage_to_free_images(browser):
 
     assert homepage.get_title(title) == title
     # NOTE # The test asserts only what the browser is doing at the moment,
-    # and does not actually test a propery of the Free images page itself.
+    # and does not actually test a property of the Free images page itself.
