@@ -19,7 +19,7 @@ def browser(scope="session"):  # session -> once before the test suite.
     browser = Chrome(options=options)
 
     # optional implicit wait
-    browser.implicitly_wait(10)
+    # browser.implicitly_wait(10)
 
     yield browser
 
