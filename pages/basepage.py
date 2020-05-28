@@ -32,7 +32,12 @@ class BasePage:
         # time.sleep(3)
         return self.browser.execute_script("arguments[0].click()", self.locator)
 
-    def get_title(self):
+    def get_title(self, title):
         # self.browser.implicitly_wait(10)
-        time.sleep(3)
+        # time.sleep(3)
+        try:
+            self.wait.until(EC.title_is(title))
+        except Exception as e:
+            print(type(e))
+            print(e.args)
         return self.browser.title
