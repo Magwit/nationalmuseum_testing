@@ -1,7 +1,8 @@
 # imports
 
 import pytest
-import selenium.webdriver
+from selenium.webdriver import Chrome
+from selenium.webdriver import ChromeOptions
 
 
 # pytest fixture config(scope="session")
@@ -12,8 +13,10 @@ import selenium.webdriver
 @pytest.fixture
 def browser(scope="session"):  # session -> once before the test suite.
 
-    # Initialize webdriver instance
-    browser = selenium.webdriver.Chrome()
+    # Initialize webdriver instance with maximized window
+    options = ChromeOptions()
+    options.add_argument("--start-maximized")
+    browser = Chrome(options=options)
 
     # optional implicit wait
     browser.implicitly_wait(10)

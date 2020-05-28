@@ -19,11 +19,10 @@ def test_homepage_to_free_images(browser):
     homepage.scroll_to(HomePage.FREE_IMAGES_TILE)
 
     # AND clicks on the Freeimages tile
-
     homepage.click_tile()
 
     # THEN the user is at Nattionalmuseum Free Images page
 
-    assert free_images.get_title() == "Fria bilder | Nationalmuseum"
+    assert homepage.get_title() == "Fria bilder | Nationalmuseum"
     # NOTE # The test asserts only what the browser is doing at the moment,
     # and does not actually test a propery of the Free images page itself.
